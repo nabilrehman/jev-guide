@@ -1,0 +1,26 @@
+{
+  "name": "jev-guide",
+  "version": "0.1.0",
+  "description": "Voice/text-driven live browser walkthroughs. Jev (TypeSafe AI) picks each click from the live DOM; Playwright drives real Chrome with an on-screen cursor and captions.",
+  "type": "module",
+  "bin": {
+    "jev-guide": "./bin/jev-guide.js"
+  },
+  "scripts": {
+    "start": "node bin/jev-guide.js",
+    "postinstall": "node -e \"console.log('If Chrome is not installed, run: npx playwright install chrome')\"",
+    "install-app": "node scripts/install-app.mjs",
+    "agent": "node bin/jev-guide.js --agent"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@google/adk": "^2.1.0",
+    "@typesafe-ai/sdk": "^0.6.0",
+    "croner": "^10.0.1",
+    "google-auth-library": "^10.9.1",
+    "playwright": "^1.63.0",
+    "zod": "^4.2.1"
+  }
+}
